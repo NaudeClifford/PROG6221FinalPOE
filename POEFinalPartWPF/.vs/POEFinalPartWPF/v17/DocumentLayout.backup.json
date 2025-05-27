@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|c:\\users\\lab_services_student\\documents\\github\\prog6221finalpoe\\poefinalpartwpf\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|c:\\users\\lab_services_student\\documents\\github\\prog6221finalpoe\\poefinalpartwpf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|c:\\users\\lab_services_student\\documents\\github\\prog6221finalpoe\\poefinalpartwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|c:\\users\\lab_services_student\\documents\\github\\prog6221finalpoe\\poefinalpartwpf\\abstractclassd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:abstractclassd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Question.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\Question.cs",
+              "RelativeDocumentMoniker": "Question.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\Question.cs*",
+              "RelativeToolTip": "Question.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAAArwBYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T11:44:45.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwA8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T11:44:43.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AbstractClassd.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\AbstractClassd.cs",
+              "RelativeDocumentMoniker": "AbstractClassd.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\AbstractClassd.cs",
+              "RelativeToolTip": "AbstractClassd.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAIAxwHAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T11:44:42.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-16T11:10:48.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAiwBsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:10:48.602Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

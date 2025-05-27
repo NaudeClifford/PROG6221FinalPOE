@@ -1,0 +1,16 @@
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\bin\Debug\POEFinalPartWPF.exe.config
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\bin\Debug\POEFinalPartWPF.exe
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\bin\Debug\POEFinalPartWPF.pdb
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\POEFinalPartWPF.csproj.AssemblyReference.cache
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\MainWindow.g.cs
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\App.g.cs
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\POEFinalPartWPF_MarkupCompile.cache
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\POEFinalPartWPF_MarkupCompile.lref
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\MainWindow.baml
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\POEFinalPartWPF.g.resources
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\POEFinalPartWPF.Properties.Resources.resources
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\POEFinalPartWPF.csproj.GenerateResource.cache
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\POEFinalPartWPF.csproj.CoreCompileInputs.cache
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\POEFinalPartWPF.exe
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\POEFinalPartWPF.pdb
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\POEFinalPartWPF_Content.g.cs

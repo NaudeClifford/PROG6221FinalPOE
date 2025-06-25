@@ -14,3 +14,7 @@ C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\
 C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\POEFinalPartWPF.exe
 C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\POEFinalPartWPF.pdb
 C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\POEFinalPartWPF_Content.g.cs
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\MiniGame.g.cs
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\TaskAssistant.g.cs
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\MiniGame.baml
+C:\Users\lab_services_student\Documents\GitHub\PROG6221FinalPOE\POEFinalPartWPF\obj\Debug\TaskAssistant.baml

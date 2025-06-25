@@ -18,7 +18,7 @@ namespace POEFinalPartWPF
 
             name = "";
             day = "";
-            favouriteTopic = new List<string>();
+            favouriteTopic = new List<string>(1);
         }
 
         public AbstractClassd(string name, string day, List<string> favouriteTopic) 

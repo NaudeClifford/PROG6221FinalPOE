@@ -2,7 +2,16 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:POEFinalPartWPF"
-             StartupUri="MainWindow.xaml">
+             StartupUri="MainWindow.xaml"
+             Exit="DisplayExitMessage">
+    <x:Code>
+        <![CDATA[
+        private void DisplayExitMessage(object sender, ExitEventArgs e)
+        {
+            MessageBox.Show("Enjoy your day");
+        }
+        ]]>
+    </x:Code>
     <Application.Resources>
          
     </Application.Resources>

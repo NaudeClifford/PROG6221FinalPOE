@@ -9,44 +9,13 @@ namespace POEFinalPartWPF
     {
         //================== Delegate for user emotions in the question ==================
 
-        public delegate void QuestionDelegate(string emotion);
+        public delegate string QuestionDelegate(string emotion);
 
         public Question() :base()
-        {
-            //================== Any errors for when the user information gets stored ==================
-            try
-            {
-                //Voice greeting
-
-                // Create a new SoundPlayer instance
-
-                SoundPlayer player = new SoundPlayer("C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\voicemail.wav");
-
-                // Load the WAV file
-                player.Load();
-
-                // Play the WAV file
-                player.PlaySync(); // PlaySync waits for the playback to complete
-            }
-
-            catch (FileNotFoundException ex)
-            {
-                throw new FileNotFoundException("File Not Found: " + ex.Message);
-            }
-
-            catch (Exception ex)
-            {
-                throw new Exception("Error " + ex.Message);
-            }
-
-            Console.WriteLine(logo() + welcomeMessage());//ascii logo and welcome message
-
-        }
+        {}
 
         public Question(string name, string day, List<string> favouriteTopic) : base(name, day, favouriteTopic)
-        {
-            
-        }
+        {}
 
         //================== Logo for application ==================
 
@@ -104,25 +73,25 @@ namespace POEFinalPartWPF
 
         //================== Emotion response ==================
 
-        List<string> worriedResponse = new List<string>(3) { "I understand why you are worried",
+        private List<string> worriedResponse = new List<string>(3) { "I understand why you are worried",
                 "You must be worried in the fast change world that is today",
                 "It is understanable, i would also wory if i could"};
 
-        List<string> frustratedResponse = new List<string>(3) { "In your position, its right to be frustrated",
+        private List<string> frustratedResponse = new List<string>(3) { "In your position, its right to be frustrated",
                 "It makes sense that you are frustrated, i would to if i can feel",
                 "There is nothing wrong with being frustrated, i understand" };
 
-        List<string> curiousResponse = new List<string>(3) { "We can all get curious sometimes, there is nothing wrong with that",
+        private List<string> curiousResponse = new List<string>(3) { "We can all get curious sometimes, there is nothing wrong with that",
                 "We must be curious now and then, otherwise what will be the joy in learn new things",
                 "Its right to be curious, it means you are human"};
 
         //================== For random generated numbers ==================
 
-        Random random = new Random();
+        private Random random = new Random();
 
-        int randomNumber;
+        private int randomNumber;
 
-        int randomNumberEmotions;
+        private int randomNumberEmotions;
 
         //================== Other questions that the user would ask thats not related to cybersecurity ==================
 
@@ -131,11 +100,7 @@ namespace POEFinalPartWPF
             //================== Array that stores the reply to the users questions ==================
 
             List<string> responseArray = new List<string>();
-
-            //================== Formatting text colour ==================
-
-            Console.ForegroundColor = ConsoleColor.Green;
-
+            
             //================== For random generated numbers ==================
 
             randomNumberEmotions = random.Next(0, 3);
@@ -306,12 +271,10 @@ namespace POEFinalPartWPF
         }
 
         //answer to password question
-        public void Password(string emotion)
+        public string Password(string emotion)
         {
 
             List<string> responseArray = new List<string>();
-
-            Console.ForegroundColor = ConsoleColor.Magenta;
 
             randomNumberEmotions = random.Next(0, 3);
 
@@ -375,14 +338,13 @@ namespace POEFinalPartWPF
 
             randomNumber = random.Next(0,3);
 
-            Console.WriteLine(responseArray[randomNumber]);
+            return responseArray[randomNumber];
         }
-        
+
         //answer to phishing question
 
-        public void Phishing(string emotion)
+        public string Phishing(string emotion)
         {
-            Console.ForegroundColor = ConsoleColor.Red;
 
             List<string> responseArray = new List<string>();
 
@@ -441,17 +403,15 @@ namespace POEFinalPartWPF
 
             randomNumber = random.Next(0,3);
 
-            Console.WriteLine(responseArray[randomNumber]);
+            return responseArray[randomNumber];
            
         }
-        
+
         //answer to safe browsing question
 
-        public void SafeBrowsing(string emotion)
+        public string SafeBrowsing(string emotion)
         {
             List<string> responseArray = new List<string>();
-
-            Console.ForegroundColor = ConsoleColor.Cyan;
 
             randomNumberEmotions = random.Next(0, 3);
 
@@ -514,8 +474,51 @@ namespace POEFinalPartWPF
 
             randomNumber = random.Next(0,4);
 
-            Console.WriteLine(responseArray[randomNumber]);
+            return responseArray[randomNumber];
         }
 
+        public string ContinueQuestion(string question)
+        {
+            string answer = "";
+            
+            switch (question)
+            {
+
+                case "password":
+                    
+                        answer = "\nYou can always download a software that will keep all of your passwords secure." +
+                            "\nyou can also have another software that auto generates passwords that gets sent to your secure password holder" +
+                            "\nthat only you can access. This way you don't ever have to worry about resetting passwords and them getting stolen.";
+                    
+                    break;
+
+                case "phishing":
+                    
+                    answer = "\nHaving to download some software that can help detect phishing attacks will help you alot." +
+                               "\nYou can also have this software block any phishing attack so that you don't ever get them and put at rish of openning them." +
+                               "\nThis might be the easiest if you are looking for the best solution.";
+                    break;
+
+                case "safe browsing":
+                    
+                    answer = "\nThere are many ways to protect your self while you safe browse but end of the day." +
+                                        "\nA human such as yourself will make a mistake and end up downloading malware accidentally." +
+                                        "\nThats why its good to have software that checks for malware and removes it.";
+                    break;
+
+                default:
+                    break;
+
+            }
+            return answer;
+        }
+
+        string log = "";
+
+        public string LogQuestions(string question)
+        {
+            log = log + "\n" + question;
+            return log;
+        }
     }
 }

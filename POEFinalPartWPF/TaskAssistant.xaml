@@ -7,18 +7,18 @@
         mc:Ignorable="d"
         Closing="Window_Closing"
         Title="ChatBot" Height="800" Width="1568" Icon="OIP.JPG" HorizontalAlignment="Center" VerticalAlignment="Center" WindowState="Maximized">
-    <Grid Background="White" Margin="0,0,10,0">
+    <Grid Background="Black" Margin="0,0,10,0">
         <MediaElement x:Name="mediaElement" Stretch="Fill"
                   LoadedBehavior="Manual" Source="C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\voicemail.wav" />
-        <Label Content="Welcome user, what do you wish to do? review or add and edit a task?" Name="ChatBotReply" FontSize="20px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" BorderThickness="2px" Margin="0,528,0,0" VerticalAlignment="Top" Height="216" Width="896" BorderBrush="#FF040505"/>
+        <TextBox Text="Welcome user, review, add, mark task or remove a task? Can also view Log Activity" IsReadOnly="true"  Name="ChatBotReply" FontSize="20px" VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" Background="White" BorderBrush="DarkBlue" BorderThickness="10px" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,528,0,0" VerticalAlignment="Top" Height="216" Width="896"/>
         <Image HorizontalAlignment="Center" Height="308" Margin="0,10,0,0" VerticalAlignment="Top" Width="604" Source="/Logo.jpg"/>
-        <Button Content="Clear"  Name="btnClear" Click="Clear_Click" FontSize="50px" HorizontalAlignment="Left" Margin="34,374,0,0" VerticalAlignment="Top" Height="100" Width="200"/>
-        <Button Content="Respond"  Name="btnRespond" Click="Respond_Click" FontSize="50px" HorizontalAlignment="Left" Margin="34,586,0,0" VerticalAlignment="Top" Height="100" Width="200"/>
-        <Button Content="Mini Game" Name="btnMiniGame" Click="MiniGame_Click" FontSize="40px" HorizontalAlignment="Left" Margin="1293,374,0,0" VerticalAlignment="Top" Height="100" Width="200" RenderTransformOrigin="0.011,-0.226"/>
-        <Button Content="Home" Name="btnHome" Click="Home_Click" FontSize="30px" HorizontalAlignment="Left" Margin="1293,586,0,0" VerticalAlignment="Top" Height="100" Width="200" RenderTransformOrigin="-0.002,0.52"/>
-        <TextBox Name="userInput" KeyUp="TextBox_KeyUp" FontSize="30px" TextAlignment="Center" BorderThickness="2px" HorizontalAlignment="Center" Margin="0,350,0,0" TextWrapping="Wrap" Text="Enter Here" VerticalAlignment="Top" Width="896" Height="148" BorderBrush="#FF0E0E0E"/>
-        <Label Content="Assistant"  BorderThickness="2px" HorizontalContentAlignment="Center" FontSize="100px" HorizontalAlignment="Left" Margin="1096,102,0,0" VerticalAlignment="Top" Height="226" Width="462"/>
-        <Label Content="Task"  BorderThickness="2px" HorizontalContentAlignment="Center" FontSize="150px" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Height="226" Width="462"/>
+        <Button Content="Clear"  Name="btnClear" Click="Clear_Click" FontSize="50px" Background="White" BorderBrush="DarkBlue" BorderThickness="10px" HorizontalAlignment="Left" Margin="34,374,0,0" VerticalAlignment="Top" Height="100" Width="232"/>
+        <Button Content="Respond"  Name="btnRespond" Click="Respond_Click" FontSize="50px" Background="White" BorderBrush="DarkBlue" BorderThickness="10px" HorizontalAlignment="Left" Margin="34,586,0,0" VerticalAlignment="Top" Height="100" Width="232"/>
+        <Button Content="Mini Game" Name="btnMiniGame" Click="MiniGame_Click" FontSize="40px" Background="White" BorderBrush="DarkBlue" BorderThickness="10px" HorizontalAlignment="Left" Margin="1293,374,0,0" VerticalAlignment="Top" Height="100" Width="224" RenderTransformOrigin="0.011,-0.226"/>
+        <Button Content="Home" Name="btnHome" Click="Home_Click" FontSize="50px" Background="White" BorderBrush="DarkBlue" BorderThickness="10px" HorizontalAlignment="Left" Margin="1293,586,0,0" VerticalAlignment="Top" Height="100" Width="224" RenderTransformOrigin="-0.002,0.52"/>
+        <TextBox Name="userInput" KeyUp="TextBox_KeyUp" FontSize="30px" Background="White" ScrollViewer.CanContentScroll="True" BorderBrush="DarkBlue" BorderThickness="10px" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,350,0,0" TextWrapping="Wrap" Text="Enter Here" VerticalAlignment="Top" Width="896" Height="148"/>
+        <Label Content="Assistant"  Background="White" BorderBrush="DarkBlue" BorderThickness="10px" HorizontalContentAlignment="Center" FontSize="100px" HorizontalAlignment="Left" Margin="1086,48,0,0" VerticalAlignment="Top" Height="226" Width="431"/>
+        <Label Content="Task"  Background="White" BorderBrush="DarkBlue" BorderThickness="10px" HorizontalContentAlignment="Center" FontSize="150px" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Height="226" Width="459"/>
 
     </Grid>
 </Window>

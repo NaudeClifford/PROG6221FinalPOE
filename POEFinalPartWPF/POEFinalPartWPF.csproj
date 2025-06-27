@@ -116,7 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Logo.jpg" />
-    <Resource Include="userInformation.txt.txt" />
+    <Resource Include="Log.txt" />
     <Content Include="voicemail.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -55,8 +55,8 @@ namespace POEFinalPartWPF
         public string welcomeMessage() 
         {
 
-            return @"
-                    ·······························································································\r" +
+            return
+            
                     "\n:__        __   _                            _           ____ _           _   ____        _   :\r" +
                     "\n:\\ \\      / /__| | ___ ___  _ __ ___   ___  | |_ ___    / ___| |__   __ _| |_| __ )  ___ | |_ :\r" +
                     "\n: \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ | __/ _ \\  | |   | '_ \\ / _` | __|  _ \\ / _ \\| __|:\r" +
@@ -67,8 +67,7 @@ namespace POEFinalPartWPF
                     "\n:| |_ / _ \\| '__|  / __| | | | '_ \\ / _ \\ '__/ __|/ _ \\/ __| | | | '__| | __| | | |           :\r" +
                     "\n:|  _| (_) | |    | (__| |_| | |_) |  __/ |  \\__ \\  __/ (__| |_| | |  | | |_| |_| |           :\r" +
                     "\n:|_|  \\___/|_|     \\___|\\__, |_.__/ \\___|_|  |___/\\___|\\___|\\__,_|_|  |_|\\__|\\__, |           :\r" +
-                    "\n:                       |___/                                                |___/            :\r" +
-                    "\n·······························································································";
+                    "\n:                       |___/                                                |___/            :\r";
         }
 
         //================== Emotion response ==================
@@ -85,6 +84,8 @@ namespace POEFinalPartWPF
                 "We must be curious now and then, otherwise what will be the joy in learn new things",
                 "Its right to be curious, it means you are human"};
 
+        private int logCount = 1;
+
         //================== For random generated numbers ==================
 
         private Random random = new Random();
@@ -99,24 +100,24 @@ namespace POEFinalPartWPF
         {
             //================== Array that stores the reply to the users questions ==================
 
-            List<string> responseArray = new List<string>();
+            List<string> responseArray = new List<string>(3);
             
             //================== For random generated numbers ==================
 
-            randomNumberEmotions = random.Next(0, 3);
+            randomNumberEmotions = random.Next(0, 2);
 
             if (question.Equals("cars") || question.Equals("car"))
             {
                 if (emotion.Equals(""))
                 {
 
-                    responseArray.Add("\nI get that cars can be a problem for the environment, this is why we must always push to reduce emisions or" +
+                    responseArray.Add("I get that cars can be a problem for the environment, this is why we must always push to reduce emisions or" +
                         "\njust go full eletric. its better for us and the world we live in.");
 
-                    responseArray.Add("\nCars can be dangerous for everyone on the road, thats why there are so many deaths on the road. i think that if" +
+                    responseArray.Add("Cars can be dangerous for everyone on the road, thats why there are so many deaths on the road. i think that if" +
                         "\neveryone follows the rules or break them safely, then the roads will be safer given that they are maintained\n");
 
-                    responseArray.Add("\nCars are fun to drive and customise, they have been part of our society for a really long time" +
+                    responseArray.Add("Cars are fun to drive and customise, they have been part of our society for a really long time" +
                         "\nand i think with more improvements. these vehicles will be a bleasing for humanitie\n");
 
                 }
@@ -125,39 +126,39 @@ namespace POEFinalPartWPF
                 else if (emotion.Equals("worried"))
                 {
 
-                    responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nI get that cars can be a problem for the environment, this is why we must always push to reduce emisions or" +
+                    responseArray.Add(worriedResponse[randomNumberEmotions] + "\nI get that cars can be a problem for the environment, this is why we must always push to reduce emisions or" +
                         "\njust go full eletric. its better for us and the world we live in.");
 
-                    responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nCars can be dangerous for everyone on the road, thats why there are so many deaths on the road. i think that if" +
+                    responseArray.Add(worriedResponse[randomNumberEmotions] + "\nCars can be dangerous for everyone on the road, thats why there are so many deaths on the road. i think that if" +
                         "\neveryone follows the rules or break them safely, then the roads will be safer given that they are maintained\n");
 
-                    responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nCars are fun to drive and customise, they have been part of our society for a really long time" +
+                    responseArray.Add(worriedResponse[randomNumberEmotions] + "\nCars are fun to drive and customise, they have been part of our society for a really long time" +
                         "\nand i think with more improvements. these vehicles will be a bleasing for humanitie\n");
                 }
 
                 else if (emotion.Equals("curious"))
                 {
 
-                    responseArray.Add("\n" + curiousResponse[randomNumberEmotions] + "\nI get that cars can be a problem for the environment, this is why we must always push to reduce emisions or" +
+                    responseArray.Add(curiousResponse[randomNumberEmotions] + "\nI get that cars can be a problem for the environment, this is why we must always push to reduce emisions or" +
                         "\njust go full eletric. its better for us and the world we live in.");
 
-                    responseArray.Add("\n" + curiousResponse[randomNumberEmotions] + "\nCars can be dangerous for everyone on the road, thats why there are so many deaths on the road. i think that if" +
+                    responseArray.Add(curiousResponse[randomNumberEmotions] + "\nCars can be dangerous for everyone on the road, thats why there are so many deaths on the road. i think that if" +
                         "\neveryone follows the rules or break them safely, then the roads will be safer given that they are maintained\n");
 
-                    responseArray.Add("\n" + curiousResponse[randomNumberEmotions] + "\nCars are fun to drive and customise, they have been part of our society for a really long time" +
+                    responseArray.Add(curiousResponse[randomNumberEmotions] + "\nCars are fun to drive and customise, they have been part of our society for a really long time" +
                         "\nand i think with more improvements. these vehicles will be a bleasing for humanitie\n");
                 }
 
                 else if (emotion.Equals("frustrated"))
                 {
 
-                    responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "\nI get that cars can be a problem for the environment, this is why we must always push to reduce emisions or" +
+                    responseArray.Add(frustratedResponse[randomNumberEmotions] + "\nI get that cars can be a problem for the environment, this is why we must always push to reduce emisions or" +
                         "\njust go full eletric. its better for us and the world we live in.");
 
-                    responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "\nCars can be dangerous for everyone on the road, thats why there are so many deaths on the road. i think that if" +
+                    responseArray.Add(frustratedResponse[randomNumberEmotions] + "\nCars can be dangerous for everyone on the road, thats why there are so many deaths on the road. i think that if" +
                         "\neveryone follows the rules or break them safely, then the roads will be safer given that they are maintained\n");
 
-                    responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "\nCars are fun to drive and customise, they have been part of our society for a really long time" +
+                    responseArray.Add(frustratedResponse[randomNumberEmotions] + "\nCars are fun to drive and customise, they have been part of our society for a really long time" +
                         "\nand i think with more improvements. these vehicles will be a bleasing for humanitie\n");
                 }
             }
@@ -167,13 +168,13 @@ namespace POEFinalPartWPF
                 if (emotion.Equals(""))
                 {
 
-                    responseArray.Add("\nBikes are very useful for getting us to places and are very fuel efficient. " +
+                    responseArray.Add("Bikes are very useful for getting us to places and are very fuel efficient. " +
                         "\nThis is a big advantage in now a days shrinking world where fuel is becoming more expensive");
 
-                    responseArray.Add("\nBikes now a days are becoming to loud and are becoming a danger to humans since people ain't respecting bikers" +
+                    responseArray.Add("Bikes now a days are becoming to loud and are becoming a danger to humans since people ain't respecting bikers" +
                         "\non the road no more because certain bikers are rude and don't respect the cars.\n");
 
-                    responseArray.Add("\nBikes can be a bleasing on the road but at the same time they can be a nightmere on road users. " +
+                    responseArray.Add("Bikes can be a bleasing on the road but at the same time they can be a nightmere on road users. " +
                         "\nIt all depends on the bike and who uses the bike.\n");
 
                 }
@@ -182,13 +183,13 @@ namespace POEFinalPartWPF
                 else if (emotion.Equals("worried"))
                 {
 
-                    responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nBikes are very useful for getting us to places and are very fuel efficient. " +
+                    responseArray.Add(worriedResponse[randomNumberEmotions] + "\nBikes are very useful for getting us to places and are very fuel efficient. " +
                         "\nThis is a big advantage in now a days shrinking world where fuel is becoming more expensive");
 
-                    responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nBikes now a days are becoming to loud and are becoming a danger to humans since people ain't respecting bikers" +
+                    responseArray.Add(worriedResponse[randomNumberEmotions] + "\nBikes now a days are becoming to loud and are becoming a danger to humans since people ain't respecting bikers" +
                         "\non the road no more because certain bikers are rude and don't respect the cars.\n");
 
-                    responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nBikes can be a bleasing on the road but at the same time they can be a nightmere on road users. " +
+                    responseArray.Add(worriedResponse[randomNumberEmotions] + "\nBikes can be a bleasing on the road but at the same time they can be a nightmere on road users. " +
                         "\nIt all depends on the bike and who uses the bike.\n");
 
                 }
@@ -196,26 +197,26 @@ namespace POEFinalPartWPF
                 else if (emotion.Equals("curious"))
                 {
 
-                    responseArray.Add("\n" + curiousResponse[randomNumberEmotions] + "\nBikes are very useful for getting us to places and are very fuel efficient. " +
+                    responseArray.Add(curiousResponse[randomNumberEmotions] + "\nBikes are very useful for getting us to places and are very fuel efficient. " +
                          "\nThis is a big advantage in now a days shrinking world where fuel is becoming more expensive");
 
-                    responseArray.Add("\n" + curiousResponse[randomNumberEmotions] + "\nBikes now a days are becoming to loud and are becoming a danger to humans since people ain't respecting bikers" +
+                    responseArray.Add(curiousResponse[randomNumberEmotions] + "\nBikes now a days are becoming to loud and are becoming a danger to humans since people ain't respecting bikers" +
                         "\non the road no more because certain bikers are rude and don't respect the cars.\n");
 
-                    responseArray.Add("\n" + curiousResponse[randomNumberEmotions] + "\nBikes can be a bleasing on the road but at the same time they can be a nightmere on road users. " +
+                    responseArray.Add(curiousResponse[randomNumberEmotions] + "\nBikes can be a bleasing on the road but at the same time they can be a nightmere on road users. " +
                         "\nIt all depends on the bike and who uses the bike.\n");
                 }
 
                 else if (emotion.Equals("frustrated"))
                 {
 
-                    responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "\nBikes are very useful for getting us to places and are very fuel efficient. " +
+                    responseArray.Add(frustratedResponse[randomNumberEmotions] + "\nBikes are very useful for getting us to places and are very fuel efficient. " +
                         "\nThis is a big advantage in now a days shrinking world where fuel is becoming more expensive");
 
-                    responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "\nBikes now a days are becoming to loud and are becoming a danger to humans since people ain't respecting bikers" +
+                    responseArray.Add(frustratedResponse[randomNumberEmotions] + "\nBikes now a days are becoming to loud and are becoming a danger to humans since people ain't respecting bikers" +
                         "\non the road no more because certain bikers are rude and don't respect the cars.\n");
 
-                    responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "\nBikes can be a bleasing on the road but at the same time they can be a nightmere on road users. " +
+                    responseArray.Add(frustratedResponse[randomNumberEmotions] + "\nBikes can be a bleasing on the road but at the same time they can be a nightmere on road users. " +
                         "\nIt all depends on the bike and who uses the bike.\n");
                 }
             }
@@ -225,11 +226,11 @@ namespace POEFinalPartWPF
                 if (emotion.Equals(""))
                 {
 
-                    responseArray.Add("\nTrucks are important in our society since they deliver large quantities of supples and goods to everywhere in the country");
+                    responseArray.Add("Trucks are important in our society since they deliver large quantities of supples and goods to everywhere in the country");
 
-                    responseArray.Add("\nTrucks can be a danger on the road since they are so difficult to stop and if it is a bad driver, well thats bad for everyone.\n");
+                    responseArray.Add("Trucks can be a danger on the road since they are so difficult to stop and if it is a bad driver, well thats bad for everyone.\n");
 
-                    responseArray.Add("\nTrucks might be unnessary at such a scale if the trains would deliver large quantities between citys.\n");
+                    responseArray.Add("Trucks might be unnessary at such a scale if the trains would deliver large quantities between citys.\n");
 
                 }
 
@@ -237,35 +238,35 @@ namespace POEFinalPartWPF
                 else if (emotion.Equals("worried"))
                 {
 
-                    responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nTrucks are important in our society since they deliver large quantities of supples and goods to everywhere in the country");
+                    responseArray.Add(worriedResponse[randomNumberEmotions] + "\nTrucks are important in our society since they deliver large quantities of supples and goods to everywhere in the country");
 
-                    responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nTrucks can be a danger on the road since they are so difficult to stop and if it is a bad driver, well thats bad for everyone.\n");
+                    responseArray.Add(worriedResponse[randomNumberEmotions] + "\nTrucks can be a danger on the road since they are so difficult to stop and if it is a bad driver, well thats bad for everyone.\n");
 
-                    responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nTrucks might be unnessary at such a scale if the trains would deliver large quantities between citys.\n");
+                    responseArray.Add(worriedResponse[randomNumberEmotions] + "\nTrucks might be unnessary at such a scale if the trains would deliver large quantities between citys.\n");
                 }
 
                 else if (emotion.Equals("curious"))
                 {
 
-                    responseArray.Add("\n" + curiousResponse[randomNumberEmotions] + "\nTrucks are important in our society since they deliver large quantities of supples and goods to everywhere in the country");
+                    responseArray.Add(curiousResponse[randomNumberEmotions] + "\nTrucks are important in our society since they deliver large quantities of supples and goods to everywhere in the country");
 
-                    responseArray.Add("\n" + curiousResponse[randomNumberEmotions] + "\nTrucks can be a danger on the road since they are so difficult to stop and if it is a bad driver, well thats bad for everyone.\n");
+                    responseArray.Add(curiousResponse[randomNumberEmotions] + "\nTrucks can be a danger on the road since they are so difficult to stop and if it is a bad driver, well thats bad for everyone.\n");
 
-                    responseArray.Add("\n" + curiousResponse[randomNumberEmotions] + "\nTrucks might be unnessary at such a scale if the trains would deliver large quantities between citys.\n");
+                    responseArray.Add(curiousResponse[randomNumberEmotions] + "\nTrucks might be unnessary at such a scale if the trains would deliver large quantities between citys.\n");
                 }
 
                 else if (emotion.Equals("frustrated"))
                 {
 
-                    responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "\nTrucks are important in our society since they deliver large quantities of supples and goods to everywhere in the country");
+                    responseArray.Add(frustratedResponse[randomNumberEmotions] + "\nTrucks are important in our society since they deliver large quantities of supples and goods to everywhere in the country");
 
-                    responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "\nTrucks can be a danger on the road since they are so difficult to stop and if it is a bad driver, well thats bad for everyone.\n");
+                    responseArray.Add(frustratedResponse[randomNumberEmotions] + "\nTrucks can be a danger on the road since they are so difficult to stop and if it is a bad driver, well thats bad for everyone.\n");
 
-                    responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "\nTrucks might be unnessary at such a scale if the trains would deliver large quantities between citys.\n");
+                    responseArray.Add(frustratedResponse[randomNumberEmotions] + "\nTrucks might be unnessary at such a scale if the trains would deliver large quantities between citys.\n");
                 }
             }
 
-            randomNumber = random.Next(0, 3);
+            randomNumber = random.Next(0, 2);
 
             return responseArray[randomNumber];
         }
@@ -280,58 +281,58 @@ namespace POEFinalPartWPF
 
             if (emotion.Equals("")) {
 
-                responseArray.Add("\nYou must not use real words in your password and ensure the numbers " +
+                responseArray.Add("You must not use real words in your password and ensure the numbers " +
                     "\nare random to make it harder for the hackers to guess your password.");
 
-                responseArray.Add("\nDo not use one password for everything, if you do, then once someone gains access" +
+                responseArray.Add("Do not use one password for everything, if you do, then once someone gains access" +
                 "\nto this password, they can use it to access all of your information.");
 
-                responseArray.Add("\nIt might bbe safest to use a randomly generated password since the pattern will" +
-                "\nbe difficult for anyone to figure out\n");
+                responseArray.Add("It might bbe safest to use a randomly generated password since the pattern will" +
+                "\nbe difficult for anyone to figure out");
 
             }
 
             else if (emotion.Equals("worried")) {
 
-                responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\njust follow these tips and your password will be safe.\n" +
+                responseArray.Add(worriedResponse[randomNumberEmotions] + "\njust follow these tips and your password will be safe.\n" +
                     "\nYou must not use real words in your password and ensure the numbers \n" +
                         "are random to make it harder for the hackers to guess your password.");
 
-                responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nBy doing this, your password will be safe." +
+                responseArray.Add(worriedResponse[randomNumberEmotions] + "\nBy doing this, your password will be safe." +
                     "\nDo not use one password for everything, if you do, then once someone gains access" +
                 "to this password, they can use it to access all of your information.");
 
-                responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nlistening to me will take your worries away." +
+                responseArray.Add(worriedResponse[randomNumberEmotions] + "\nlistening to me will take your worries away." +
                     "\nIt might be safest to use a randomly generated password since the pattern will" +
                 "\nbe difficult for anyone to figure out\n");
             }
 
             else if (emotion.Equals("curious")) {
 
-                responseArray.Add("\n" + curiousResponse[randomNumberEmotions] +
+                responseArray.Add(curiousResponse[randomNumberEmotions] +
                     "\nIts because you must not use real words in your password and ensure the numbers " +
                     "\nare random to make it harder for the hackers to guess your password.");
 
-                responseArray.Add("\n" + curiousResponse[randomNumberEmotions] +
+                responseArray.Add(curiousResponse[randomNumberEmotions] +
                     "\nStart be not using one password for everything, if you do, then once someone gains access" +
                 "\nto this password, they can use it to access all of your information.");
 
-                responseArray.Add("\n" + curiousResponse[randomNumberEmotions] +
+                responseArray.Add(curiousResponse[randomNumberEmotions] +
                     "\nIt might bbe safest to use a randomly generated password since the pattern will" +
                 "\nbe difficult for anyone to figure out\n");
             }
 
             else if (emotion.Equals("frustrated")) {
 
-                responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "i can explain passwords for you." +
+                responseArray.Add(frustratedResponse[randomNumberEmotions] + "i can explain passwords for you." +
                     "\nYou must not use real words in your password and ensure the numbers " +
                         "\nare random to make it harder for the hackers to guess your password.");
 
-                responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] +
+                responseArray.Add(frustratedResponse[randomNumberEmotions] +
                     "\nDo not use one password for everything, if you do, then once someone gains access" +
                 "\nto this password, they can use it to access all of your information.");
 
-                responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] +
+                responseArray.Add(frustratedResponse[randomNumberEmotions] +
                     "\nIt might bbe safest to use a randomly generated password since the pattern will" +
                 "\nbe difficult for anyone to figure out\n");
             }
@@ -353,51 +354,51 @@ namespace POEFinalPartWPF
             if (emotion.Equals(""))
             {
 
-                responseArray.Add("\nTo prevent phishing, you must first understand phishing and on what an phishing attack looks like.");
+                responseArray.Add("To prevent phishing, you must first understand phishing and on what an phishing attack looks like.");
 
-                responseArray.Add("\n\nYou can download free anti-phishing software or go for security awareness traing to be able to " +
+                responseArray.Add("You can download free anti-phishing software or go for security awareness traing to be able to " +
                 "\nidentify phishing.");
 
-                responseArray.Add("\n\nBe aware of dangerous emails and never click on the links that will most likely be an phishing attack.\n");
+                responseArray.Add("Be aware of dangerous emails and never click on the links that will most likely be an phishing attack.\n");
 
             }
 
             else if (emotion.Equals("worried")) {
 
-                responseArray.Add("\n" + worriedResponse[randomNumberEmotions] +
+                responseArray.Add(worriedResponse[randomNumberEmotions] +
                     "\nTo prevent phishing, you must first understand phishing and on what an phishing attack looks like.");
 
-                responseArray.Add("\n" + worriedResponse[randomNumberEmotions] +
+                responseArray.Add(worriedResponse[randomNumberEmotions] +
                     "\nYou can download free anti-phishing software or go for security awareness traing to be able to " +
                     "\nidentify phishing.");
 
-                responseArray.Add("\n" + worriedResponse[randomNumberEmotions] +
+                responseArray.Add(worriedResponse[randomNumberEmotions] +
                     "\nBeing aware of dangerous emails and never click on the links that will most likely be an phishing attack.\n");
             }
 
             else if (emotion.Equals("curious")) {
 
-                responseArray.Add("\n" + curiousResponse[randomNumberEmotions] +
+                responseArray.Add(curiousResponse[randomNumberEmotions] +
                     "\nTo prevent phishing, you must first understand phishing and on what an phishing attack looks like.");
 
-                responseArray.Add("\n" + curiousResponse[randomNumberEmotions] +
+                responseArray.Add(curiousResponse[randomNumberEmotions] +
                     "\nYou can download free anti-phishing software or go for security awareness traing to be able to " +
                 "\nidentify phishing.");
 
-                responseArray.Add("\n" + curiousResponse[randomNumberEmotions] +
+                responseArray.Add(curiousResponse[randomNumberEmotions] +
                     "\nBe aware of dangerous emails and never click on the links that will most likely be" +"an phishing attack.\n");
             }
 
             else if (emotion.Equals("frustrated")) {
 
-                responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "\nThe hackers to becoming more bold now a days." +
+                responseArray.Add(frustratedResponse[randomNumberEmotions] + "\nThe hackers to becoming more bold now a days." +
                     "\nTo prevent phishing, you must first understand phishing and on what an phishing attack looks like.");
 
-                responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "We all need to keep of aaccounts safe." +
+                responseArray.Add(frustratedResponse[randomNumberEmotions] + "We all need to keep of aaccounts safe." +
                     "\nYou can download free anti-phishing software or go for security awareness traing to be able to " +
                 "\nidentify phishing.");
 
-                responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "\nThis is the correct reaction to someone trying to steal your account information." +
+                responseArray.Add(frustratedResponse[randomNumberEmotions] + "\nThis is the correct reaction to someone trying to steal your account information." +
                     "\nBe aware of dangerous emails and never click on the links that will most likely be an phishing attack.\n");
             }
 
@@ -418,57 +419,57 @@ namespace POEFinalPartWPF
             if (emotion.Equals(""))
             {
 
-                responseArray.Add("\n\nWhen browsing the internet, you need to keep your browser up to date to ensure that there isn't any vulnerabilities with the browser..");
+                responseArray.Add("When browsing the internet, you need to keep your browser up to date to ensure that there isn't any vulnerabilities with the browser..");
 
-                responseArray.Add("\n\nUse secure and trusted internet connection by not using public Wi-Fi networks and using a VPN.");
+                responseArray.Add("Use secure and trusted internet connection by not using public Wi-Fi networks and using a VPN.");
 
-                responseArray.Add("\nInstall reliable antivirus and firewall software that will protect you from malware, viruses and cyber threats.");
+                responseArray.Add("Install reliable antivirus and firewall software that will protect you from malware, viruses and cyber threats.");
 
-                responseArray.Add("\nAvoid downloading from untrusted sources to prevent the chance of downloading malware or viruses.");
+                responseArray.Add("Avoid downloading from untrusted sources to prevent the chance of downloading malware or viruses.");
             }
 
             else if (emotion.Equals("worried")) {
 
-                responseArray.Add("\n" + worriedResponse[randomNumberEmotions] +  "\nWe must be safe when to browse the internet." +
+                responseArray.Add(worriedResponse[randomNumberEmotions] +  "\nWe must be safe when to browse the internet." +
                     "\nWhen browsing the internet, you need to keep your browser up to date to ensure that there isn't any vulnerabilities with the browser..");
 
-                responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nWe will understand on how to stay safe." +
+                responseArray.Add(worriedResponse[randomNumberEmotions] + "\nWe will understand on how to stay safe." +
                     "\nUse secure and trusted internet connection by not using public Wi-Fi networks and using a VPN.");
 
-                responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nAlways try to ensure your internet security." +
+                responseArray.Add(worriedResponse[randomNumberEmotions] + "\nAlways try to ensure your internet security." +
                     "\nInstall reliable antivirus and firewall software that will protect you from malware, viruses and cyber threats.");
 
-                responseArray.Add("\n" + worriedResponse[randomNumberEmotions] + "\nIf your browser is unsafe, you will get hacked." +
+                responseArray.Add(worriedResponse[randomNumberEmotions] + "\nIf your browser is unsafe, you will get hacked." +
                     "\nAvoid downloading from untrusted sources to prevent the chance of downloading malware or viruses.");
             }
 
             else if (emotion.Equals("curious")) {
 
-                responseArray.Add("\n" + curiousResponse[randomNumberEmotions] +
+                responseArray.Add(curiousResponse[randomNumberEmotions] +
                     "\nWhen browsing the internet, you need to keep your browser up to date to ensure that there isn't any vulnerabilities with the browser..");
 
-                responseArray.Add("\n" + curiousResponse[randomNumberEmotions] + "\nThere is nothing wrong we wanting to learn." +
+                responseArray.Add(curiousResponse[randomNumberEmotions] + "\nThere is nothing wrong we wanting to learn." +
                     "\nUse secure and trusted internet connection by not using public Wi-Fi networks and using a VPN.");
 
-                responseArray.Add("\n" + curiousResponse[randomNumberEmotions] +
+                responseArray.Add(curiousResponse[randomNumberEmotions] +
                     "\nInstall reliable antivirus and firewall software that will protect you from malware, viruses and cyber threats.");
 
-                responseArray.Add("\n" + curiousResponse[randomNumberEmotions] +
+                responseArray.Add(curiousResponse[randomNumberEmotions] +
                     "\nAvoid downloading from untrusted sources to prevent the chance of downloading malware or viruses.");
             }
 
             else if (emotion.Equals("frustrated")) {
 
-                responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "\nA safe browser is very important for protecting of information." +
+                responseArray.Add(frustratedResponse[randomNumberEmotions] + "\nA safe browser is very important for protecting of information." +
                     "\nWhen browsing the internet, you need to keep your browser up to date to ensure that there isn't any vulnerabilities with the browser..");
 
-                responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] + "\nThe hackers in our world are becoming more difficult to counter." +
+                responseArray.Add(frustratedResponse[randomNumberEmotions] + "\nThe hackers in our world are becoming more difficult to counter." +
                     "\nUse secure and trusted internet connection by not using public Wi-Fi networks and using a VPN.");
 
-                responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] +
+                responseArray.Add(frustratedResponse[randomNumberEmotions] +
                     "\nInstall reliable antivirus and firewall software that will protect you from malware, viruses and cyber threats.");
 
-                responseArray.Add("\n" + frustratedResponse[randomNumberEmotions] +
+                responseArray.Add(frustratedResponse[randomNumberEmotions] +
                     "\nAvoid downloading from untrusted sources to prevent the chance of downloading malware or viruses.");
             }
 
@@ -486,7 +487,7 @@ namespace POEFinalPartWPF
 
                 case "password":
                     
-                        answer = "\nYou can always download a software that will keep all of your passwords secure." +
+                        answer = "You can always download a software that will keep all of your passwords secure." +
                             "\nyou can also have another software that auto generates passwords that gets sent to your secure password holder" +
                             "\nthat only you can access. This way you don't ever have to worry about resetting passwords and them getting stolen.";
                     
@@ -494,14 +495,14 @@ namespace POEFinalPartWPF
 
                 case "phishing":
                     
-                    answer = "\nHaving to download some software that can help detect phishing attacks will help you alot." +
+                    answer = "Having to download some software that can help detect phishing attacks will help you alot." +
                                "\nYou can also have this software block any phishing attack so that you don't ever get them and put at rish of openning them." +
                                "\nThis might be the easiest if you are looking for the best solution.";
                     break;
 
                 case "safe browsing":
                     
-                    answer = "\nThere are many ways to protect your self while you safe browse but end of the day." +
+                    answer = "There are many ways to protect your self while you safe browse but end of the day." +
                                         "\nA human such as yourself will make a mistake and end up downloading malware accidentally." +
                                         "\nThats why its good to have software that checks for malware and removes it.";
                     break;
@@ -513,11 +514,33 @@ namespace POEFinalPartWPF
             return answer;
         }
 
-        string log = "";
-
-        public string LogQuestions(string question)
+        public void LogQuestions(string question)
         {
-            log = log + "\n" + question;
+
+            StreamWriter writer = new StreamWriter("C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\Log.txt", true);
+
+            writer.WriteLine(logCount + ": " + question);
+
+            logCount++;
+
+            writer.Close();
+        }
+
+        public string ReadLogQuestions()
+        {
+
+            StreamReader reader = new StreamReader("C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\Log.txt");
+                
+            string log = "";
+            
+            string[] lines = File.ReadAllLines("C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\Log.txt"); // Read all lines
+            
+            for (int i = lines.Length-1; i > lines.Length-6; i--)
+            {
+                log = log + "\n" + lines[i];
+            }
+            reader.Close();
+            
             return log;
         }
     }

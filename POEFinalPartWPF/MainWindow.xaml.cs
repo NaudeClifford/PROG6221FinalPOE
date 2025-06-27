@@ -25,36 +25,28 @@ namespace POEFinalPartWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        Question question = new Question();
-
-        TaskAssistant taskAssistant = new TaskAssistant();
-
-        MiniGame miniGame = new MiniGame();
+        private Question question = new Question();
 
         public MainWindow()
-        {      
-           
+        {
             InitializeComponent();
 
-            this.Show();
+            welcomeMessageLabel.Content = question.welcomeMessage();
 
             mediaElement.Play();
-
         }
 
-        private List<string> otherKeywords = new List<string> { "car", "cars", "trucks", "truck", "bike", "bikes", "no" };
+        private List<string> otherKeywords = new List<string> { "car", "cars", "trucks", "truck", "bike", "bikes", "no"};
 
-        private List<string> keywords = new List<string> { "passwords", "password", "phishing", "safe browsing", "no" };
+        private List<string> keywords = new List<string> { "passwords", "password", "phishing", "safe browsing", "no"};
 
         private List<string> emotionKeywords = new List<string> { "worried", "curious", "frustrated" };
 
-        private List<string> interestedKeywords = new List<string> { "passwords", "password", "phishing", "safe browsing", };
+        private List<string> interestedKeywords = new List<string> { "passwords", "password", "phishing", "safe browsing"};
 
         //================== Calling Delegate ==================
 
         private QuestionDelegate questionDelegate;
-
-        //private StreamWriter writer = new StreamWriter("C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\userInformation.txt.txt");
 
         private string askQuestion1 = "";
 
@@ -73,182 +65,60 @@ namespace POEFinalPartWPF
 
             switch (askQuestionCount)
             {
-
+                //how was your day question, savecount 2
                 case 1:
-                        //================== Asking how was the day so far ==================
+                    //================== Asking how was the day so far ==================
 
-                        askQuestion1 = "--------------------------------------------------\n\n- How was your day so far, " + userName + "?  -\n\n--------------------------------------------------";
+                    ChatBotReply.FontSize = 30;
 
-                        ChatBotReply.Content = askQuestion1;
-                        break;
+                    askQuestion1 = "--------------------------------------------------\n\n- How was your day so far, " + userName + "?  -\n\n--------------------------------------------------";
 
+                    ChatBotReply.Text = askQuestion1;
+
+                    saveQuestionCount = 2;
+                        
+                    break;
+                //save count 3, asking for favourite topic
                 case 2:
 
-                        //================== Asking for favourite topics from the user ==================
-                        askQuestion1 = "--------------------------------------------------\n\n- What are you interest in, " + userName + "?, mainly in cyberSecurity  -\n\n--------------------------------------------------";
+                    //================== Asking for favourite topics from the user ==================
+                    ChatBotReply.FontSize = 30;
 
-                        ChatBotReply.Content = askQuestion1;
+                    askQuestion1 = "--------------------------------------------------\n\n- What are you interested in, " + userName + "?, mainly in cyberSecurity  -\n\n--------------------------------------------------";
 
-                        break;
+                    ChatBotReply.Text = askQuestion1;
 
+                    saveQuestionCount = 3;
+
+                    break;
+                //save count 4, asking to continue to cyber security
                 case 3:
+
+                    ChatBotReply.FontSize = 20;
 
                     askQuestion1 = "--------------------------------------------------\n\n- Any Questions before we continue to cyberSecurity, " + userName + "?, 'Yes', or 'No'  -\n\n--------------------------------------------------";
 
-                    ChatBotReply.Content = askQuestion1;
+                    ChatBotReply.Text = askQuestion1;
+
+                    saveQuestionCount = 4;
 
                     break;
-
+                //save count 5, asking what type of questions to ask
                 case 4:
+
+                    ChatBotReply.FontSize = 20;
 
                     askQuestion1 = "--------------------------------------------------\n\n-  What type of question would you like to ask, " + userName + "?  -\n\n--------------------------------------------------";
 
-                    ChatBotReply.Content = askQuestion1;
-                    
-                    break;
+                    ChatBotReply.Text = askQuestion1;
 
+                    saveQuestionCount = 5;
+
+                    break;
+                //otherquestions, save count 6
                 case 5:
-
-                    string userInterest = question.getFavouriteTopic()[0];
-
-                        askQuestion1 = "\n--------------------------------------------------\n\n-  " +
-                                "\nWhat Question do you wish to ask about cyber security, " + userName + "?, Enter 'No' for exit\n\n--------------------------------------------------\n\n";
-
-
-                    if (userInterest.Equals("password") || userInterest.Equals("passwords")) askQuestion1 = askQuestion1 +
-                            "\nAs someone interested in Passwords, i recommend you ask about Password security" +
-                        "\n--------------------------------------------------\n\n";
-
-                    else if (userInterest.Equals("phishing")) askQuestion1 = askQuestion1 +
-                            "\nAs someone interested in Phishing, i recommend you ask about Phishing security" +
-                        "\n--------------------------------------------------\n\n";
-
-                    else if (userInterest.Equals("safe browsing")) askQuestion1 = askQuestion1 +
-                            "\nAs someone interested in Safe Browsing, i recommend you ask about Safe Browsing security" +
-                        "\n--------------------------------------------------\n\n";
-
-                        ChatBotReply.Content = askQuestion1;
-
-                    break;
-
-                case 6:
-                    questionDelegate = question.ContinueQuestion;
-
-                    ChatBotReply.Content = questionDelegate(answer2);
-                    askQuestionCount--;
-                    saveQuestionCount--;
-                break;
-
-                case 7:
-
-                    askQuestion1 = "Do you wish to leave?";
-
-                    ChatBotReply.Content = askQuestion1;
-
-                    if (userInput.Text.ToLower().Equals("yes")) askQuestionCount = 0;
-                        
-                    else if(userInput.Text.ToLower().Equals("no")) askQuestionCount = 5;
-                        
-
-                    break;
-
-                default:
-                    break;
-            }
-        }
-
-        private void saveQuestion() 
-        {
-
-            string userName = question.getName();
-
-            switch (saveQuestionCount)
-            {
-
-                case 1:
-                        
-                    userName = userInput.Text;
-
-                    question.setName(userName);
-
-                    askQuestionCount = 1;
-
-                    saveQuestionCount++;
-
-                    break;
-
-                case 2:
-
-                        string userDay = userInput.Text;
-
-                        question.setDay(userDay);
-
-                        ChatBotReply.Content = "...";
-
-                        askQuestionCount++;
-
-                        saveQuestionCount++;
-
-                        break;
-
-                case 3:
-
-                        string userFavourite = userInput.Text;
-
-                        string userInterest = "";
-
-                        List<string> recognizedKeywordsInterest = RecognizeKeywords(userFavourite.ToLower(), interestedKeywords);
-
-                        foreach (string keyword in recognizedKeywordsInterest)
-                        {
-                            userInterest = keyword;
-                        }
-
-
-                        List<string> topicArray = question.getFavouriteTopic();
-
-                        topicArray.Add(userInterest);
-
-                        question.setFavouriteTopic(topicArray);
-
-                        ChatBotReply.Content = "...";
-
-                        Thread.Sleep(3000); //wait for 3 seconds
-                        
-                        MessageBox.Show("Great, i will remember that you are interest interested in " + userFavourite, "Great", MessageBoxButton.OK);
-
-                        askQuestionCount++;
-
-                        saveQuestionCount++;                        
-
-                    break;
-
-                case 4:
-                        
-                    string otherQuestions = userInput.Text;
-
-                    ChatBotReply.Content = "...";
-
-                    Thread.Sleep(3000); //wait for 3 seconds
-
-                    if (otherQuestions.ToLower().Equals("no"))
-                    {
-                        askQuestionCount = askQuestionCount + 2;
-                        saveQuestionCount = saveQuestionCount + 2;
-                    }
-
-                    else if (otherQuestions.ToLower().Equals("yes"))
-                    {
-                        askQuestionCount++;
-                        saveQuestionCount++;
-                    }
-                    else ChatBotReply.Content = "\nSorry, I didn't understand that. Could you rephrase\n";
-
-                        break;
-
-                case 5:
-
                     //================== Searching Keywords for question ==================
+                    askQuestion1 = userInput.Text;
 
                     List<string> recognizedKeywords = RecognizeKeywords(askQuestion1.ToLower(), otherKeywords);
 
@@ -268,63 +138,88 @@ namespace POEFinalPartWPF
                         emotion = keyword;
                     }
 
-                    if (!answer2.Equals(null))
-                    {
-                        ChatBotReply.Content = question.otherQuestions(answer2, emotion);
-                        askQuestionCount = 3;
-                        saveQuestionCount--;
-                        Thread.Sleep(10000);
-                    }
+                    ChatBotReply.Text = question.otherQuestions(answer2, emotion);
 
-                    else if (answer2.Equals("no")) break;
-
-                    else MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
+                    saveQuestionCount = 6;
+                    
+                    userInput.Text = "";
 
                     break;
-
+                //save count 7, asking what question in cyber security should i answer
                 case 6:
 
-                        recognizedKeywords = RecognizeKeywords(askQuestion1.ToLower(), keywords);
+                    ChatBotReply.FontSize = 15;
 
-                        foreach (string keyword in recognizedKeywords)
-                        {
-                            answer2 = keyword;
-                        }
+                    string userInterest = question.getFavouriteTopic()[0];
 
-                        //================== Searching Keywords for emotion ==================
+                    askQuestion1 = "\n----------------------------------------------------------------------------------------------------\n  " +
+                                "\n-What Question do you wish to ask about cyber security, " + userName + "?-" +
+                                "\n----------------------------------------------------------------------------------------------------\n\n";
 
-                        recognizedEmotionKeywords = RecognizeKeywords(askQuestion1.ToLower(), emotionKeywords);
+                    if (userInterest.Equals("password") || userInterest.Equals("passwords")) askQuestion1 = askQuestion1 +
+                            "\nAs someone interested in Passwords, i recommend you ask about Password security" +
+                        "\n--------------------------------------------------\n\n";
 
-                        emotion = "";
+                    else if (userInterest.Equals("phishing")) askQuestion1 = askQuestion1 +
+                            "\nAs someone interested in Phishing, i recommend you ask about Phishing security" +
+                        "\n--------------------------------------------------\n\n";
 
-                        foreach (string keyword in recognizedEmotionKeywords)
-                        {
-                            emotion = keyword;
-                        }
+                    else if (userInterest.Equals("safe browsing")) askQuestion1 = askQuestion1 +
+                            "\nAs someone interested in Safe Browsing, i recommend you ask about Safe Browsing security" +
+                        "\n--------------------------------------------------\n\n";
 
-                    if (answer2.Equals("no"))
+                    ChatBotReply.Text = askQuestion1;
+
+                    saveQuestionCount = 7;
+
+                    userInput.Text = "";
+
+                    break;
+                //save count 8, ask to continue question's answer
+                case 7:
+                    ChatBotReply.FontSize = 20;
+
+                    askQuestion1 = userInput.Text;
+
+                    recognizedKeywords = RecognizeKeywords(askQuestion1.ToLower(), keywords);
+
+                    foreach (string keyword in recognizedKeywords)
                     {
-                        askQuestionCount = 7;
+                        answer2 = keyword;
+                    }
+
+                    //================== Searching Keywords for emotion ==================
+
+                    recognizedEmotionKeywords = RecognizeKeywords(askQuestion1.ToLower(), emotionKeywords);
+
+                    emotion = "";
+
+                    foreach (string keyword in recognizedEmotionKeywords)
+                    {
+                        emotion = keyword;
                     }
 
                     //================== Password Question ==================
 
-                    else if (answer2.Equals("password") || answer2.Equals("passwords"))
+                    if (answer2.Equals("password") || answer2.Equals("passwords"))
                     {
                         questionDelegate = question.Password;
 
-                        ChatBotReply.Content =  questionDelegate(emotion);
+                        ChatBotReply.Text = questionDelegate(emotion) + ". May i continue?";
+
+                        saveQuestionCount = 8;
 
                     }
-                    
+
                     //================== Phishing Question ==================
 
                     else if (answer2.Equals("phishing"))
                     {
                         questionDelegate = question.Phishing;
 
-                        ChatBotReply.Content = questionDelegate(emotion);
+                        ChatBotReply.Text = questionDelegate(emotion) + ". May i continue?";
 
+                        saveQuestionCount = 8;
                     }
 
                     //================== SAfe Browsing Question ==================
@@ -333,20 +228,175 @@ namespace POEFinalPartWPF
                     {
                         questionDelegate = question.SafeBrowsing;
 
-                        ChatBotReply.Content = questionDelegate(emotion);
+                        ChatBotReply.Text = questionDelegate(emotion) + ". May i continue?";
 
+                        saveQuestionCount = 8;
                     }
-                    
-                    else ChatBotReply.Content = "\nSorry, I didn't understand that. Could you rephrase\n";
-                       
-                    askQuestionCount++;
 
-                        break;
-                                       
-                    default:
-                        break;
+                    else ChatBotReply.Text = "\nSorry, I didn't understand that. Could you rephrase\n";
+
+                    userInput.Text = "";
+
+                    break;
+                //savecount = 9, continue with question answer
+                case 8:
+
+                    questionDelegate = question.ContinueQuestion;
+
+                    ChatBotReply.Text = questionDelegate(answer2);
+
+                    saveQuestionCount = 9;
+
+                    userInput.Text = "";
+
+                    break;
+                //savecount = 10, ask if user wants to leave
+                case 9:
+
+                    askQuestion1 = "Do you wish to leave?";
+
+                    ChatBotReply.Text = askQuestion1;
+
+                    saveQuestionCount = 10;
+
+                    userInput.Text = "";
+
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        private void saveQuestion() 
+        {
+
+            string userName = question.getName();
+
+            switch (saveQuestionCount)
+            {
+                //question count = 1, save user name
+                case 1:
+                        
+                    userName = userInput.Text;
+
+                    question.setName(userName);
+
+                    askQuestionCount = 1;
+
+                    userInput.Text = "";
+
+                    break;
+                //question count = 2, save user day
+                case 2:
+
+                    string userDay = userInput.Text;
+
+                    question.setDay(userDay);
+
+                    ChatBotReply.Text = "...";
+
+                    askQuestionCount = 2;
+
+                    userInput.Text = "";
+
+                    break;
+                //question count = 3, save user favourite topic
+                case 3:
+
+                    string userFavourite = userInput.Text;
+
+                    string userInterest = "";
+
+                    List<string> recognizedKeywordsInterest = RecognizeKeywords(userFavourite.ToLower(), interestedKeywords);
+
+                    foreach (string keyword in recognizedKeywordsInterest)
+                    {
+                        userInterest = keyword;
+                    }
+
+
+                    List<string> topicArray = question.getFavouriteTopic();
+
+                    topicArray.Add(userInterest);
+
+                    question.setFavouriteTopic(topicArray);
+                        
+                    MessageBox.Show("Great, i will remember that you are interested in " + userFavourite, "Great", MessageBoxButton.OK);
+
+                    askQuestionCount = 3;
+
+                    userInput.Text = "";
+
+                    break;
+                //question count = 4, 6, save other questions
+                case 4:
+                        
+                    string otherQuestions = userInput.Text;
+
+                    if (otherQuestions.ToLower().Equals("no")) askQuestionCount = 6;
+                    
+
+                    else if (otherQuestions.ToLower().Equals("yes")) askQuestionCount = 4;
+                    
+                    userInput.Text = "";
+
+                    break;
+                //question count = 5, other questions asked
+                case 5:
+
+                    askQuestionCount = 5;
+
+                    break;
+                //question count = 6, cybersecurity questions
+                case 6:
+
+                    askQuestionCount = 6;
+
+                    break;
+                //question count = 7 
+                case 7:
+
+                    askQuestionCount = 7;
+                    break;
+                //question count = 8, yes or no, 9 
+                case 8:
+
+                    ChatBotReply.FontSize = 20;
+
+                    string user = userInput.Text;
+
+                    if (user.ToLower().Equals("yes"))
+                    {
+
+                        askQuestionCount = 8;
+                    }
+
+                    else
+                    {
+
+                        askQuestionCount = 9;
+                    }
+                    break;
+                //question count = 9 
+                case 9:
+                    askQuestionCount = 9;
+                    break;
+                //question count = 0, 6, yes or no 
+                case 10:
+
+                    if (userInput.Text.ToLower().Equals("yes")) askQuestionCount = 0;
+                    
+                    else if (userInput.Text.ToLower().Equals("no")) askQuestionCount = 6;
+                    
+                    break;
+
+                default:
+                        
+                    userInput.Text = "";
+
+                    break;
                 }
-            
         }
         
         private void TextBox_KeyUp(object sender, KeyEventArgs e)
@@ -355,10 +405,7 @@ namespace POEFinalPartWPF
             {
                 try
                 {
-                    ChatBotReply.Content = "...";
-
-                    Thread.Sleep(3000); //wait for 3 seconds
-
+                    
                     saveQuestion();
 
                     askQuestion();
@@ -366,29 +413,34 @@ namespace POEFinalPartWPF
                     if (askQuestionCount == 0) this.Close();
 
                 }
-                catch (NullReferenceException ex)
+                catch (NullReferenceException)
                 {
-                    ChatBotReply.Content = ex.Message;
+                    MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                catch (FormatException ex)
+                catch (FormatException)
                 {
-                    ChatBotReply.Content = ex.Message;
+                    MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                catch (FileNotFoundException ex)
+                catch (FileNotFoundException)
                 {
-                    ChatBotReply.Content = ex.Message;
+                    MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                catch (ArgumentException ex) 
+                catch (ArgumentException) 
                 {
-                    ChatBotReply.Content = ex.Message;
+                    MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                catch (Exception ex)
+                catch (StackOverflowException)
                 {
-                    ChatBotReply.Content = ex.Message;
+                    MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
@@ -397,10 +449,7 @@ namespace POEFinalPartWPF
         {
             try
             {
-                ChatBotReply.Content = "...";
-
-                Thread.Sleep(3000); //wait for 3 seconds
-
+                
                 saveQuestion();
 
                 askQuestion();
@@ -408,29 +457,34 @@ namespace POEFinalPartWPF
                 if (askQuestionCount == 0) this.Close();
             
             }
-            catch (NullReferenceException ex)
+            catch (NullReferenceException)
             {
-                ChatBotReply.Content = ex.Message;
+                MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            catch (FormatException ex)
+            catch (FormatException)
             {
-                ChatBotReply.Content = ex.Message;
+                MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            catch (FileNotFoundException ex)
+            catch (FileNotFoundException)
             {
-                ChatBotReply.Content = ex.Message;
+                MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            catch (ArgumentException ex)
+            catch (ArgumentException)
             {
-                ChatBotReply.Content = ex.Message;
+                MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            catch (Exception ex)
+            catch (StackOverflowException)
             {
-                ChatBotReply.Content = ex.Message;
+                MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            catch (Exception)
+            {
+                MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -441,14 +495,20 @@ namespace POEFinalPartWPF
 
         private void MiniGame_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            MiniGame miniGame = new MiniGame();
+            
             miniGame.Show();
+            
+            this.Hide();
         }
 
         private void TaskAssistant_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            TaskAssistant taskAssistant = new TaskAssistant();
+            
             taskAssistant.Show();
+            
+            this.Hide();     
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -464,8 +524,6 @@ namespace POEFinalPartWPF
 
             else { }
         }
-
-    
 
         private static List<string> RecognizeKeywords(string text, List<string> keywords)
         {

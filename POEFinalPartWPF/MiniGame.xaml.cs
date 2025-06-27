@@ -23,110 +23,121 @@ namespace POEFinalPartWPF
     public partial class MiniGame : Window
     {
 
-        Question question = new Question();
+        private Question question = new Question();
 
-        MainWindow home = new MainWindow();
-
-        TaskAssistant taskAssistant = new TaskAssistant();
-
-        private int askQuestionCount = 10;
+        private int askQuestionCount = 15;
 
         private int saveQuestionCount = 1;
 
         private string askQuestion1 = "";
 
+        private List<string> correctAnswersArray = new List<string>(10) { "", "", "", "", "", "", "", "", "", ""};
+
+        private int quizResult = 0;
+        
         public MiniGame()
         {
             InitializeComponent();
         }
 
+        private List<string> keywords = new List<string> { "" };
+
         private void askQuestion()
         {
-
-            string userName = question.getName();
 
             switch (askQuestionCount)
             {
 
                 case 1:
-                    //================== Asking how was the day so far ==================
 
-                    askQuestion1 = "--------------------------------------------------\n\n-Question 1-\n\n--------------------------------------------------";
+                    askQuestion1 = "--------------------------------------------------\n\n-When it is time to change passwords, whats the easier way to choose one?-\n\n--------------------------------------------------";
 
-                    ChatBotReply.Content = askQuestion1;
+                    ChatBotReply.Text = askQuestion1;
                     break;
 
                 case 2:
 
-                    //================== Asking for favourite topics from the user ==================
-                    askQuestion1 = "--------------------------------------------------\n\n-Question 2-\n\n--------------------------------------------------";
+                    askQuestion1 = "--------------------------------------------------\n\n-What are the normal characters used in a password?-\n\n--------------------------------------------------";
 
-                    ChatBotReply.Content = askQuestion1;
+                    ChatBotReply.Text = askQuestion1;
 
                     break;
 
                 case 3:
 
-                    askQuestion1 = "--------------------------------------------------\n\n-Question 3-\n\n--------------------------------------------------";
+                    askQuestion1 = "--------------------------------------------------\n\n-_____ is a internet scam done by cyber criminals where user is convinced to provide information.-\n\n--------------------------------------------------";
 
-                    ChatBotReply.Content = askQuestion1;
+                    ChatBotReply.Text = askQuestion1;
 
                     break;
 
                 case 4:
 
-                    askQuestion1 = "--------------------------------------------------\n\n-Question 4-\n\n--------------------------------------------------";
+                    askQuestion1 = "--------------------------------------------------\n\n-Phishers often develop ______ websites for tricking users and filling their personal data-\n\n--------------------------------------------------";
 
-                    ChatBotReply.Content = askQuestion1;
+                    ChatBotReply.Text = askQuestion1;
 
                     break;
 
                 case 5:
 
-                    askQuestion1 = "--------------------------------------------------\n\n-Question 5-\n\n--------------------------------------------------";
+                    askQuestion1 = "--------------------------------------------------\n\n-What is internet safety?-\n\n--------------------------------------------------";
 
-                    ChatBotReply.Content = askQuestion1;
+                    ChatBotReply.Text = askQuestion1;
 
                     break;
 
                 case 6:
 
-                    askQuestion1 = "--------------------------------------------------\n\n-Question 6-\n\n--------------------------------------------------";
+                    askQuestion1 = "--------------------------------------------------\n\n-What is a common risk with sharing personal information on the internet?-\n\n--------------------------------------------------";
 
-                    ChatBotReply.Content = askQuestion1;
+                    ChatBotReply.Text = askQuestion1;
 
                     break;
 
                 case 7:
 
-                    askQuestion1 = "--------------------------------------------------\n\n-Question 7-\n\n--------------------------------------------------";
+                    askQuestion1 = "--------------------------------------------------\n\n-What risk are accociated with social engineering attacks-\n\n--------------------------------------------------";
 
-                    ChatBotReply.Content = askQuestion1;
+                    ChatBotReply.Text = askQuestion1;
 
                     break;
 
                 case 8:
 
-                    askQuestion1 = "--------------------------------------------------\n\n-Question 8-\n\n--------------------------------------------------";
+                    askQuestion1 = "--------------------------------------------------\n\n-What challenges have you faced with social engineering attacks? no wrong answers-\n\n--------------------------------------------------";
 
-                    ChatBotReply.Content = askQuestion1;
+                    ChatBotReply.Text = askQuestion1;
 
                     break;
 
                 case 9:
 
-                    askQuestion1 = "--------------------------------------------------\n\n-Question 9-\n\n--------------------------------------------------";
+                    askQuestion1 = "--------------------------------------------------\n\n-I have a really strong password, should i use it for many years? True/False-\n\n--------------------------------------------------";
 
-                    ChatBotReply.Content = askQuestion1;
+                    ChatBotReply.Text = askQuestion1;
 
                     break;
 
                 case 10:
 
-                    askQuestion1 = "--------------------------------------------------\n\n-Question 10-\n\n--------------------------------------------------";
+                    askQuestion1 = "--------------------------------------------------\n\n-What is the purpose of privacy settings on social media?\na) To restrict internet access" +
+                        "\nb) To protect personal information and control who view it\nc) To share personal information\nd) To block all incoming messages" +
+                        "n\n--------------------------------------------------";
 
-                    ChatBotReply.Content = askQuestion1;
+                    ChatBotReply.Text = askQuestion1;
 
+                    break;
+                //Result
+                case 11:
+
+                    if (quizResult >= 8) askQuestion1 = "Results: " + quizResult + "\nGreat job, You are a cyber security pro!";
+
+                    else if (quizResult < 8 && quizResult >= 5) askQuestion1 = "Results: " + quizResult + "\nNot bad";
+
+                    else askQuestion1 = "Results: " + quizResult + "\nKeep learning to be safe online";
+
+                    ChatBotReply.Text = askQuestion1;
                     break;
 
                 default:
@@ -134,152 +145,322 @@ namespace POEFinalPartWPF
             }
         }
 
-        int quizResult = 0;
-
         private void saveQuestion()
-        {
-            if (saveQuestionCount.Equals(12)) { }
+        {            
 
-            else {
-
-                switch (saveQuestionCount)
+            switch (saveQuestionCount)
                 {
+                //asking to start
+                case 1:
 
-                    case 1:
+                    ChatBotReply.FontSize = 20;
 
-                        if (userInput.Text.ToLower().Equals("")) quizResult++;
-
-                        ChatBotReply.Content = "...";
-
+                    if (userInput.Text.ToLower().Equals("yes"))
+                    {
                         askQuestionCount = 1;
 
                         saveQuestionCount++;
+                    }
+
+                    userInput.Text = "";
 
                         break;
+                //Question 1
+                case 2:
+                        //Answer: choose something you can remember but make it complex to strengthen the password
+                    askQuestion1 = userInput.Text.ToLower();
 
-                    case 2:
+                    string user1 = "";
 
-                        if (userInput.Text.ToLower().Equals("")) quizResult++;
+                    string user2 = "";
 
-                        ChatBotReply.Content = "...";
+                    List<string> correctAnswers = new List<string>(2) { "something that you can remember", "something that i can remember"};
+                        
+                    List<string> correctAnswers2 = new List<string>(2) { "make it complex", "make it complicated" };
 
-                        askQuestionCount++;
+                            //recognize the keywords
+                    List<string> recognizedKeywordsInterest = RecognizeKeywords(askQuestion1, correctAnswers);
 
-                        saveQuestionCount++;
+                    foreach (string keyword in recognizedKeywordsInterest) user1 = keyword;
 
-                        break;
+                    ///recognize the keywords
+                    List<string> recognizedKeywordsInterest1 = RecognizeKeywords(askQuestion1, correctAnswers2);
 
-                    case 3:
+                    foreach (string keyword in recognizedKeywordsInterest1) user2 = keyword;
 
-                        if (userInput.Text.ToLower().Equals("")) quizResult++;
+                    if ((user1.Equals("something that you can remember") || user1.Equals("something that i can remember")) && (user2.Equals("make it complex") || user2.Equals("make it complicated")))
+                        {
+                            MessageBox.Show("\nCorrect, You must always pick something that you can remember\nand it must be complex enough to be safe"
+                                , "Feedback", MessageBoxButton.OK, MessageBoxImage.Information);
+                            quizResult++;
+                            correctAnswersArray[0] = userInput.Text;
+                        }
 
-                        ChatBotReply.Content = "...";
+                    else MessageBox.Show("\nSorry, Wrong Answer. You must always pick something that you can remember\nand it must be complex enough to be safe"
+                        , "Invalid", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                        askQuestionCount++;
+                    askQuestionCount++;
 
-                        saveQuestionCount++;
+                    saveQuestionCount++;
 
-                        break;
+                    userInput.Text = "";
 
-                    case 4:
+                    break;
+                //Question 2
+                case 3:
+                        //Answer: choose something you can remember but make it complex to strengthen the password
+                    askQuestion1 = userInput.Text.ToLower();
 
-                        if (userInput.Text.ToLower().Equals("")) quizResult++;
+                    user1 = "";
 
-                        ChatBotReply.Content = "...";
+                    correctAnswers = new List<string>(7) { "letters", "letter", "number", "numbers", "mixed case", "mixed cases", "special characters"};
+                        
+                    //recognize the keywords
+                    recognizedKeywordsInterest = RecognizeKeywords(askQuestion1, correctAnswers);
 
-                        askQuestionCount++;
+                    foreach (string keyword in recognizedKeywordsInterest) user1 = keyword;
+                   
+                    if (user1.Equals("letters") || user1.Equals("letter") || user1.Equals("number") || user1.Equals("numbers") || user1.Equals("mixed case") || user1.Equals("mixed cases") ||
+                            user1.Equals("special characters"))
+                        {
+                            MessageBox.Show("\nCorrect, A password can consist of lots of different characters.\n As long as that are not predictable", "Feedback", MessageBoxButton.OK, MessageBoxImage.Information);
+                            quizResult++;
+                            correctAnswersArray[1] = userInput.Text;
+                        }
 
-                        saveQuestionCount++;
+                    else MessageBox.Show("\nSorry, Wrong Answer.  A password must consist of lots of different characters", "Invalid", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                        break;
+                    askQuestionCount++;
 
-                    case 5:
+                    saveQuestionCount++;
 
-                        if (userInput.Text.ToLower().Equals("")) quizResult++;
-
-                        ChatBotReply.Content = "...";
-
-                        askQuestionCount++;
-
-                        saveQuestionCount++;
-
-                        break;
-
-                    case 6:
-
-                        if (userInput.Text.ToLower().Equals("")) quizResult++;
-
-                        ChatBotReply.Content = "...";
-
-                        askQuestionCount++;
-
-                        saveQuestionCount++;
-
-                        break;
-
-                    case 7:
-
-                        if (userInput.Text.ToLower().Equals("")) quizResult++;
-
-                        ChatBotReply.Content = "...";
-
-                        askQuestionCount++;
-
-                        saveQuestionCount++;
-
-                        break;
-
-                    case 8:
-
-                        if (userInput.Text.ToLower().Equals("")) quizResult++;
-
-                        ChatBotReply.Content = "...";
-
-                        askQuestionCount++;
-
-                        saveQuestionCount++;
+                    userInput.Text = "";
 
                         break;
+                //Question 3
+                case 4:
+                    //Answer: choose something you can remember but make it complex to strengthen the password
+                    askQuestion1 = userInput.Text.ToLower();
 
-                    case 9:
+                    user1 = "";
 
-                        if (userInput.Text.ToLower().Equals("")) quizResult++;
 
-                        ChatBotReply.Content = "...";
+                    correctAnswers = new List<string>(1) { "phishing" };
 
-                        askQuestionCount++;
+                    //recognize the keywords
+                    recognizedKeywordsInterest = RecognizeKeywords(askQuestion1, correctAnswers);
 
-                        saveQuestionCount++;
+                    foreach (string keyword in recognizedKeywordsInterest) user1 = keyword;
+                    
+                    if (user1.Equals("phishing"))
+                    {
+                        MessageBox.Show("\nCorrect, Phishing is a internet scam", "Feedback", MessageBoxButton.OK, MessageBoxImage.Information);
+                        quizResult++;
+                        correctAnswersArray[2] = userInput.Text;
+                    }
 
+                    else MessageBox.Show("\nSorry, Wrong Answer. Phishing is a internet scam, \nnot: " + user1, "Invalid", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    askQuestionCount++;
+
+                    saveQuestionCount++;
+
+                    userInput.Text = "";
+
+                    break;
+                //Question 4
+                case 5:
+                    //Answer: choose something you can remember but make it complex to strengthen the password
+                    askQuestion1 = userInput.Text.ToLower();
+
+                    user1 = "";
+
+                    correctAnswers = new List<string>(1) { "illegitimate" };
+
+                    //recognize the keywords
+                    recognizedKeywordsInterest = RecognizeKeywords(askQuestion1, correctAnswers);
+
+                    foreach (string keyword in recognizedKeywordsInterest) user1 = keyword;
+                    
+                    if (user1.Equals("illegitimate"))
+                    {
+                        MessageBox.Show("\nCorrect, Phishers make illegitimate websites", "Feedback", MessageBoxButton.OK, MessageBoxImage.Information);
+                        quizResult++;
+                        correctAnswersArray[3] = userInput.Text;
+                    }
+
+                    else MessageBox.Show("\nSorry, Wrong Answer. Phishers make illegitimate websites", "Invalid", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    askQuestionCount++;
+
+                    saveQuestionCount++;
+
+                    userInput.Text = "";
+                    break;
+                //Question 5
+                case 6:
+                    //Answer: choose something you can remember but make it complex to strengthen the password
+                    askQuestion1 = userInput.Text.ToLower();
+
+                    user1 = "";
+
+                    correctAnswers = new List<string>(2) { "protecting individuels and information" };
+
+                    //recognize the keywords
+                    recognizedKeywordsInterest = RecognizeKeywords(askQuestion1, correctAnswers);
+
+                    foreach (string keyword in recognizedKeywordsInterest) user1 = keyword;
+                    
+                    if (user1.Equals("protecting individuels and information"))
+                    {
+                        MessageBox.Show("\nCorrect, Internet safety is for protecting individuels and information. \nIt is important to know next time you fill a form.",
+                            "Feedback", MessageBoxButton.OK, MessageBoxImage.Information);
+                        quizResult++;
+                        correctAnswersArray[4] = userInput.Text;
+                    }
+
+                    else MessageBox.Show("\nSorry, Internet safety is for protecting individuels and information. \nIt is important to know next time you fill a form.",
+                        "Invalid", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    askQuestionCount++;
+
+                    saveQuestionCount++;
+
+                    userInput.Text = "";
+
+                    break;
+                //Question 6
+                case 7:
+                    //Answer: choose something you can remember but make it complex to strengthen the password
+                    askQuestion1 = userInput.Text.ToLower();
+
+                    user1 = "";
+
+                    correctAnswers = new List<string>(1) { "identity theft" };
+
+                    //recognize the keywords
+                    recognizedKeywordsInterest = RecognizeKeywords(askQuestion1, correctAnswers);
+
+                    foreach (string keyword in recognizedKeywordsInterest) user1 = keyword;
+                    
+                    if (user1.Equals("identity theft"))
+                    {
+                        MessageBox.Show("\nCorrect, Be careful sharing information on the internet as it can result in identity theft", "Feedback", MessageBoxButton.OK, MessageBoxImage.Information);
+                        quizResult++;
+                        correctAnswersArray[5] = userInput.Text;
+                    }
+
+                    else MessageBox.Show("\nSorry, Wrong Answer. answer is identity theft since othre people have your information, \nthey can act as you",
+                        "Invalid", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    askQuestionCount++;
+
+                    saveQuestionCount++;
+
+                    userInput.Text = "";
+
+                    break;
+                //Question 7
+                case 8:
+                    //Answer: choose something you can remember but make it complex to strengthen the password
+                    askQuestion1 = userInput.Text.ToLower();
+
+                    user1 = "";
+
+                    correctAnswers = new List<string>(2) { "financial loss", "reputation damage", "data breaches", "compliance violations" };
+
+                    //recognize the keywords
+                    recognizedKeywordsInterest = RecognizeKeywords(askQuestion1, correctAnswers);
+
+                    foreach (string keyword in recognizedKeywordsInterest) user1 = keyword;
+                   
+                    if (user1.Equals("financial loss") || user1.Equals("reputation damage") || user1.Equals("data breaches") || user1.Equals("compliance violations"))
+                    {
+                        MessageBox.Show("\nCorrect, they are many risk to social engineering, that is why you must learn more on the topic", "Feedback", MessageBoxButton.OK, MessageBoxImage.Information);
+                        quizResult++;
+                        correctAnswersArray[6] = userInput.Text;
+                    }
+
+                    else MessageBox.Show("\nSorry, Wrong Answer. answer is any of these: financial loss, reputation damage, data breaches, compliance violations", "Invalid",
+                        MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    askQuestionCount++;
+
+                    saveQuestionCount++;
+
+                    userInput.Text = "";
+                    break;
+                //Question 8
+                case 9:
+                    //Answer: choose something you can remember but make it complex to strengthen the password
+                    askQuestion1 = userInput.Text.ToLower();
+
+                    MessageBox.Show("\nCorrect, No wrong answers", "Valid", MessageBoxButton.OK, MessageBoxImage.Information);
+                    quizResult++;
+                    correctAnswersArray[7] = userInput.Text;
+                   
+                    askQuestionCount++;
+
+                    saveQuestionCount++;
+
+                    userInput.Text = "";
+                    break;
+                //Question 9
+                case 10:
+                    //Answer: choose something you can remember but make it complex to strengthen the password
+                    askQuestion1 = userInput.Text.ToLower();
+
+                    user1 = "";
+
+                    correctAnswers = new List<string>(2) { "true", "false" };
+
+                    //recognize the keywords
+                    recognizedKeywordsInterest = RecognizeKeywords(askQuestion1, correctAnswers);
+
+                    foreach (string keyword in recognizedKeywordsInterest) user1 = keyword;
+                    
+                    if (user1.Equals("true") || user1.Equals("false"))
+                    {
+                        MessageBox.Show("\nCorrect, You should always change passwords every year as a good practice", "Feedback", MessageBoxButton.OK, MessageBoxImage.Information);
+                        quizResult++;
+                        correctAnswersArray[0] = userInput.Text;
+                    }
+
+                    else MessageBox.Show("\nSorry, Wrong Answer, you should always change passwords every year as a safe practice", "Invalid", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    askQuestionCount++;
+
+                    saveQuestionCount++;
+
+                    userInput.Text = "";
+
+                    break;
+                //Question 10
+                case 11:
+                    //Answer: choose something you can remember but make it complex to strengthen the password
+                    askQuestion1 = userInput.Text.ToLower();
+
+                    if (askQuestion1.Equals("b"))
+                    {
+                        MessageBox.Show("\nCorrect, To protect personal information, this is important to prevent identity theft attacks, Enter Ok to finish", "Feedback",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
+                        quizResult++;
+                        correctAnswersArray[0] = userInput.Text;
+                    }
+
+                    else MessageBox.Show("\nSorry, Wrong Answer. answer is (b) to protect personal information, Enter Ok to finish", "Invalid", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    askQuestionCount++;
+
+                    saveQuestionCount++;
+
+                    userInput.Text = "";
+                    break;
+
+                default:
+                    userInput.Text = ""; 
                         break;
-
-                    case 10:
-
-                        if (userInput.Text.ToLower().Equals("")) quizResult++;
-
-                        ChatBotReply.Content = "...";
-
-                        askQuestionCount++;
-
-                        saveQuestionCount++;
-
-                        break;
-
-                    case 11:
-
-                        if (userInput.Text.ToLower().Equals("")) quizResult++;
-
-                        ChatBotReply.Content = "...";
-
-                        askQuestionCount++;
-
-                        saveQuestionCount++;
-
-                        break;
-
-                    default:
-                        break;
-                }
+                
             }
 
         }
@@ -290,9 +471,6 @@ namespace POEFinalPartWPF
             {
                 try
                 {
-                    ChatBotReply.Content = "...";
-
-                    Thread.Sleep(3000); //wait for 3 seconds
 
                     saveQuestion();
 
@@ -301,29 +479,29 @@ namespace POEFinalPartWPF
                     if (askQuestionCount == 0) this.Close();
 
                 }
-                catch (NullReferenceException ex)
+                catch (NullReferenceException)
                 {
-                    ChatBotReply.Content = ex.Message;
+                    MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                catch (FormatException ex)
+                catch (FormatException)
                 {
-                    ChatBotReply.Content = ex.Message;
+                    MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                catch (FileNotFoundException ex)
+                catch (FileNotFoundException)
                 {
-                    ChatBotReply.Content = ex.Message;
+                    MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                catch (ArgumentException ex)
+                catch (ArgumentException)
                 {
-                    ChatBotReply.Content = ex.Message;
+                    MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    ChatBotReply.Content = ex.Message;
+                    MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
@@ -332,9 +510,6 @@ namespace POEFinalPartWPF
         {
             try
             {
-                ChatBotReply.Content = "...";
-
-                Thread.Sleep(3000); //wait for 3 seconds
 
                 saveQuestion();
 
@@ -343,29 +518,29 @@ namespace POEFinalPartWPF
                 if (askQuestionCount == 0) this.Close();
 
             }
-            catch (NullReferenceException ex)
+            catch (NullReferenceException)
             {
-                ChatBotReply.Content = ex.Message;
+                MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            catch (FormatException ex)
+            catch (FormatException)
             {
-                ChatBotReply.Content = ex.Message;
+                MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            catch (FileNotFoundException ex)
+            catch (FileNotFoundException)
             {
-                ChatBotReply.Content = ex.Message;
+                MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            catch (ArgumentException ex)
+            catch (ArgumentException)
             {
-                ChatBotReply.Content = ex.Message;
+                MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            catch (Exception ex)
+            catch (Exception)
             {
-                ChatBotReply.Content = ex.Message;
+                MessageBox.Show("\nSorry, I didn't understand that. Could you rephrase\n", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -376,14 +551,28 @@ namespace POEFinalPartWPF
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            MainWindow home = new MainWindow();
+            
             home.Show();
+            
+            this.Hide();
+
+            if (askQuestionCount != 11) question.LogQuestions("Quiz started: " + askQuestionCount + " questions completed, Score: " + quizResult);
+
+            else question.LogQuestions("Quiz started: " + askQuestionCount + " questions completed, Score: " + quizResult);
         }
 
         private void TaskAssistant_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            TaskAssistant taskAssistant = new TaskAssistant();
+
             taskAssistant.Show();
+            
+            this.Hide();
+
+            if (askQuestionCount != 11) question.LogQuestions("Quiz started: " + askQuestionCount + " questions completed, Score: " + quizResult);
+
+            else question.LogQuestions("Quiz started: " + askQuestionCount + " questions completed, Score: " + quizResult);
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -397,7 +586,11 @@ namespace POEFinalPartWPF
             if (result == MessageBoxResult.No)
                 e.Cancel = true;
 
-            else { }
+            else {
+                if (askQuestionCount != 11) question.LogQuestions("Quiz started: " + askQuestionCount + " questions completed, Score: " + quizResult);
+                
+                else question.LogQuestions("Quiz started: " + askQuestionCount + " questions completed, Score: " + quizResult);
+            }
         }
 
         private static List<string> RecognizeKeywords(string text, List<string> keywords)

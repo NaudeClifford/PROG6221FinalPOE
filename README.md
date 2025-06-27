@@ -12,7 +12,7 @@ https://onlineexammaker.com/kb/20-internet-safety-quiz-questions-and-answers/
 Remote rocketShip. (2025, June 27). 10 Social engineering penetration tester Interview Questions and Answers for security engineers. Retrieved from Remote rocketShip: 
 https://www.remoterocketship.com/advice/guide/security-engineer/social-engineering-penetration-tester-interview-questions-and-answers
 
-Youtube Link: 
+Youtube Link: https://youtu.be/JQTdnyDR-gU
 
 Project description: This project is a GUI interface AI ChatBot that is meant to answer user's cyber security questions and has a task assistant where the user can 
 manage task. It also allows the user to do a 10 question quiz to test them on their cybersecurity questions.

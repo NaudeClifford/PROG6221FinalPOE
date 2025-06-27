@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\log.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:log.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\minigame.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:minigame.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\taskassistant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:taskassistant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\abstractclassd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:abstractclassd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|c:\\users\\lab_services_student\\documents\\github\\prog6221finalpoe\\poefinalpartwpf\\log.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:log.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -17,22 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\minigame.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:minigame.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\taskassistant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:taskassistant.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\abstractclassd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:abstractclassd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|c:\\users\\lab_services_student\\documents\\github\\prog6221finalpoe\\poefinalpartwpf\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|solutionrelative:question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B7E0D9D-F381-4F4B-A041-E99323D649FD}|POEFinalPartWPF.csproj|C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\taskassistant.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,90 +62,89 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Log.txt",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\Log.txt",
               "RelativeDocumentMoniker": "Log.txt",
               "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\Log.txt",
               "RelativeToolTip": "Log.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-06-26T21:35:18.675Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-26T13:59:42.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T13:59:42.647Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Question.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\Question.cs",
               "RelativeDocumentMoniker": "Question.cs",
               "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\Question.cs",
               "RelativeToolTip": "Question.cs",
-              "ViewState": "AgIAAAgCAAAAAAAAAAAYwBsCAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBwCAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T11:44:45.42Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "AbstractClassd.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\AbstractClassd.cs",
               "RelativeDocumentMoniker": "AbstractClassd.cs",
               "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\AbstractClassd.cs",
               "RelativeToolTip": "AbstractClassd.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAowFEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwFEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T11:44:42.094Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAWwKsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0BAAAAAAAAAAAYwJEBAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T11:10:48.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "TaskAssistant.xaml.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\TaskAssistant.xaml.cs",
               "RelativeDocumentMoniker": "TaskAssistant.xaml.cs",
               "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\TaskAssistant.xaml.cs",
               "RelativeToolTip": "TaskAssistant.xaml.cs",
-              "ViewState": "AgIAAMQAAAAAAAAAAAArwNcAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAADcBAAAAAAAAAAAAwCUCAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T12:20:54.159Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MiniGame.xaml.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\MiniGame.xaml.cs",
               "RelativeDocumentMoniker": "MiniGame.xaml.cs",
               "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\MiniGame.xaml.cs",
               "RelativeToolTip": "MiniGame.xaml.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAYwIsAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAIMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T12:21:01.303Z",
               "EditorCaption": ""
@@ -159,20 +158,18 @@
               "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-27T13:41:19.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T13:41:19.079Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "MiniGame.xaml",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\MiniGame.xaml",
               "RelativeDocumentMoniker": "MiniGame.xaml",
               "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\MiniGame.xaml",
               "RelativeToolTip": "MiniGame.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-27T12:16:57.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T12:16:57.954Z"
             },
             {
               "$type": "Document",
@@ -183,8 +180,7 @@
               "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\PROG6221FinalPOE\\POEFinalPartWPF\\TaskAssistant.xaml",
               "RelativeToolTip": "TaskAssistant.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-27T12:19:59.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T12:19:59.307Z"
             },
             {
               "$type": "Document",
